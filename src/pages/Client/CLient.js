@@ -22,6 +22,8 @@ import axios from "axios";
 import { useCart } from "react-use-cart";
 import { CartCard } from "../../components/CartCard/CartCard";
 import { Close, Done } from "@mui/icons-material";
+import ScaleLoader from "react-spinners/ScaleLoader";
+
 
 export const CLient = () => {
     const { totalItems, isEmpty, cartTotal, emptyCart, id, items } = useCart()
@@ -32,6 +34,7 @@ export const CLient = () => {
     const LogOut = () => {
         localStorage.removeItem('token')
         localStorage.removeItem('user')
+        setProduct("")
         navigate("/register")
     }
 
@@ -138,18 +141,30 @@ export const CLient = () => {
                     </List>
                 </Drawer>
             </Box>
-            <Box sx={{ marginLeft: "-10px", marginTop: "85px", }}>
-                <Box>
-                    {
-                        product.map(item => (
-                            <Box key={item.id}>
-                                <ClientProductCard item={item} />
-                                {/* <AdminProductCard item={item} /> */}
-                            </Box>
-                        ))
-                    }
+            {
+                user ? (
+                    <Box sx={{ marginLeft: "-10px", marginTop: "85px", }}>
+                        <Box>
+                            {
+                                product.map(item => (
+                                    <Box key={item.id}>
+                                        <ClientProductCard item={item} />
+                                        {/* <AdminProductCard item={item} /> */}
+                                    </Box>
+                                ))
+                            }
+                        </Box>
+                    </Box>
+                ) : <Box padding={5} width="100%" margin="0 auto">
+                    <ScaleLoader
+                        color={"#1976D2FF"}
+                        loading={true}
+                        size={150}
+                        aria-label="Loading Spinner"
+                        data-testid="loader"
+                    />
                 </Box>
-            </Box>
+            }
             <Modal title="Are you sure?" modal={orderModal} setOrderModal={setOrderModal}>
                 <Stack direction="row" spacing='2'>
                     <Button onClick={() => setOrderModal(false)} variant="outlined" color="error" endIcon={<Close />}>NO</Button>
