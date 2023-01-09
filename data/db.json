@@ -199,6 +199,14 @@
       "last_name": "Qodi",
       "gender": "male",
       "id": 25
+    },
+    {
+      "email": "jni@gmail.com",
+      "password": "$2a$10$fGY3Ir6Ty851LbUUdzbZgOkYWBklN5grFL/cYHB9HGuB..nHCKDUG",
+      "first_name": "Joni",
+      "last_name": "Qodirov",
+      "gender": "male",
+      "id": 26
     }
   ],
   "orders": [],
