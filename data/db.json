@@ -279,6 +279,30 @@
       "last_name": "Khaitboyev",
       "gender": "male",
       "id": 35
+    },
+    {
+      "email": "mashxur@gmail.com",
+      "password": "$2a$10$Q/pGYyamUwpDsEXVUYSWb.fQfS0oQzdakWnqMUCW8SVeDFkVGKEVS",
+      "first_name": "Mashxur",
+      "last_name": "Sha",
+      "gender": "male",
+      "id": 36
+    },
+    {
+      "email": "mwfe@gmail.com",
+      "password": "$2a$10$8swOdcxE/ED0LueVeCRohO/pa3.shqnpYh4Vq66iX9d8dsj/9aHvW",
+      "first_name": "wledkfmdnbgkpk[d",
+      "last_name": "welfdkdmgnkbfkm",
+      "gender": "male",
+      "id": 37
+    },
+    {
+      "email": "okvdp@gmail.com",
+      "password": "$2a$10$4S7BsHt3CsjrVAohrve5qeUaeznp7hReT5w/bEY0WvGf5lixxMf.S",
+      "first_name": "wka",
+      "last_name": "jongrofdn",
+      "gender": "male",
+      "id": 38
     }
   ],
   "orders": [],

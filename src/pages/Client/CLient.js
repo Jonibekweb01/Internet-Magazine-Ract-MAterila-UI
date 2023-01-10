@@ -21,7 +21,7 @@ import './Client.css'
 import axios from "axios";
 import { useCart } from "react-use-cart";
 import { CartCard } from "../../components/CartCard/CartCard";
-import { Close, Done } from "@mui/icons-material";
+import { ClearAll, Close, Done } from "@mui/icons-material";
 import ScaleLoader from "react-spinners/ScaleLoader";
 
 
@@ -34,7 +34,7 @@ export const CLient = () => {
     const LogOut = () => {
         localStorage.removeItem('token')
         localStorage.removeItem('user')
-        setProduct("")
+        isEmpty(setProduct(ClearAll))
         navigate("/register")
     }
 
@@ -123,7 +123,7 @@ export const CLient = () => {
                         </Stack>
                         <Stack direction='column'>
                             <Typography textAlign="center" marginTop={2}>Total: {cartTotal}</Typography>
-                            <Button onClick={() => emptyCart(id)} sx={{
+                            <Button onClick={() => isEmpty(id)} sx={{
                                 width: "100%",
                                 marginX: "10px",
                                 marginY: "10px",
