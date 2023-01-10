@@ -122,6 +122,7 @@ export const CLient = () => {
                             }
                         </Stack>
                         <Stack direction='column'>
+                            <Typography textAlign="center" marginTop={2}>Total: {cartTotal}</Typography>
                             <Button onClick={() => emptyCart(id)} sx={{
                                 width: "100%",
                                 marginX: "10px",
